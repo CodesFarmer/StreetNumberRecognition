@@ -2,6 +2,107 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4057d0b3-c631-4776-b632-83a202ed92f2" name="Default" comment="">
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/validation/1.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/validation/10.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/validation/100.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/validation/11.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/validation/12.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/validation/13.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/validation/14.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/validation/15.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/validation/16.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/validation/17.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/validation/18.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/validation/19.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/validation/2.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/validation/20.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/validation/21.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/validation/22.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/validation/23.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/validation/24.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/validation/25.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/validation/26.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/validation/27.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/validation/28.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/validation/29.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/validation/3.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/validation/30.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/validation/31.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/validation/32.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/validation/33.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/validation/34.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/validation/35.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/validation/36.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/validation/37.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/validation/38.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/validation/39.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/validation/4.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/validation/40.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/validation/41.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/validation/42.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/validation/43.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/validation/44.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/validation/45.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/validation/46.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/validation/47.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/validation/48.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/validation/49.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/validation/5.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/validation/50.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/validation/51.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/validation/52.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/validation/53.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/validation/54.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/validation/55.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/validation/56.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/validation/57.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/validation/58.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/validation/59.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/validation/6.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/validation/60.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/validation/61.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/validation/62.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/validation/63.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/validation/64.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/validation/65.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/validation/66.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/validation/67.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/validation/68.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/validation/69.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/validation/7.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/validation/70.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/validation/71.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/validation/72.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/validation/73.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/validation/74.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/validation/75.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/validation/76.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/validation/77.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/validation/78.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/validation/79.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/validation/8.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/validation/80.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/validation/81.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/validation/82.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/validation/83.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/validation/84.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/validation/85.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/validation/86.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/validation/87.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/validation/88.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/validation/89.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/validation/9.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/validation/90.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/validation/91.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/validation/92.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/validation/93.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/validation/94.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/validation/95.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/validation/96.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/validation/97.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/validation/98.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/validation/99.png" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/gen_pnet_data.py" afterPath="$PROJECT_DIR$/src/gen_pnet_data.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -27,8 +128,8 @@
       <file leaf-file-name="gen_pnet_data.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/gen_pnet_data.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="162">
-              <caret line="9" column="34" lean-forward="true" selection-start-line="9" selection-start-column="34" selection-end-line="9" selection-end-column="34" />
+            <state relative-caret-position="0">
+              <caret line="13" column="0" lean-forward="true" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
               <folding>
                 <element signature="e#0#18#0" expanded="true" />
               </folding>
@@ -49,10 +150,10 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="65" />
-    <option name="y" value="-4" />
-    <option name="width" value="1301" />
-    <option name="height" value="772" />
+    <option name="x" value="64" />
+    <option name="y" value="-11" />
+    <option name="width" value="1303" />
+    <option name="height" value="780" />
   </component>
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
@@ -73,6 +174,7 @@
     </navigator>
     <panes>
       <pane id="Scratches" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -101,7 +203,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -225,18 +326,19 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="65" y="-4" width="1301" height="772" extended-state="6" />
+    <frame x="64" y="-11" width="1303" height="780" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24980783" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32884902" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32884902" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.39910313" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Data View" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -251,10 +353,36 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager />
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/src/gen_pnet_data.py</url>
+          <line>17</line>
+        </line-breakpoint>
+      </breakpoints>
+      <option name="time" value="1" />
+    </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/detect_number.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="72">
+          <caret line="4" column="21" lean-forward="false" selection-start-line="4" selection-start-column="21" selection-end-line="4" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/gen_pnet_data.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="9" column="34" lean-forward="false" selection-start-line="9" selection-start-column="34" selection-end-line="9" selection-end-column="34" />
+          <folding>
+            <element signature="e#0#18#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/detect_number.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="72">
@@ -283,8 +411,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/gen_pnet_data.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="162">
-          <caret line="9" column="34" lean-forward="true" selection-start-line="9" selection-start-column="34" selection-end-line="9" selection-end-column="34" />
+        <state relative-caret-position="0">
+          <caret line="13" column="0" lean-forward="true" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
           <folding>
             <element signature="e#0#18#0" expanded="true" />
           </folding>
