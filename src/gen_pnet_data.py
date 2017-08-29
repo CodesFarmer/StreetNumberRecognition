@@ -24,7 +24,7 @@ ptfid = open(os.path.join(data_dir, "part.txt"), 'w')
 file_path = os.path.join(data_dir, "validation_gt.mat")
 
 #define the input size
-pnet_insize = 12
+pnet_insize = 6
 
 #print(file_path)
 mat_name = scio.loadmat(file_path)
