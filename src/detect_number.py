@@ -37,6 +37,9 @@ class Network(object):
     def get_unique_name(self, prefix):
         ident = sum(t.startwith(prefix) for t,_ in self.layers.item()) + 1
         return '%s_%d'%(prefix, ident)
+    def make_var(self, name, shape):
+        "create a new tensorflow variable"
+        return tf.get_variable(name=name,validate_shape=shape, trainable=self.trainable)
     @layer
     def conv(self, input, k_h, k_w, c_o, s_h, s_w, name, relu=True, padding='SAME', group=1, biased=True):
         #verify the input padding is existing
@@ -49,4 +52,50 @@ class Network(object):
         convolve = lambda i,k: tf.nn.conv2d(i, k, [1, s_h, s_w, 1], padding=padding)
         #set the input and kernel for the convolutional layer
         with tf.variable_scope(name) as scope:
-            kernel = tf.
+            kernel = self.make_var('weights', [k_h, k_w, c_i//group, c_o])
+            output = convolve(input, kernel)
+            if biased:
+                biases = self.make_var('biases', [1,1,1,c_o])
+                output = tf.nn.bias_add(output, biases)
+            if relu:
+                output = tf.nn.relu(output, name=scope.name)
+            return output
+
+    @layer
+    def pooling(self, input, k_h, k_w, s_h, s_w, name, padding='SAME'):
+        assert padding in ('SAME', 'VALID')
+        output = tf.nn.max_pool(input, ksize=[1, k_h, k_w, 1],
+                                strides=[1, s_h, s_w, 1],
+                                padding=padding, name=name)
+        return output
+    @layer
+    def fclayer(self, input, num_out, name, relu=True):
+        with tf.variable_scope(name):
+            input_shape = input.getshape()
+            if input_shape.ndims == 4:
+                dim = 1
+                for d in input_shape[1:].as_list():
+                    dim *= int(d)
+                feed_in = tf.reshape(input, [-1, dim])
+            else:
+                feed_in, dim = (input, input_shape[-1].value)
+            weights = self.make_var('weights', shape=[dim, num_out])
+            biases = self.make_var('biases', shape=[-1, num_out])
+            op = tf.nn.relu_layer if relu else tf.nn.xw_plus_b
+            output = op(feed_in, weights, biases, name=name)
+            return output
+    @layer
+    def softmax(self, target, axis, name=None):
+        "softmax function for normalization"
+        max_axis = tf.reduce_max(target, axis, keep_dims=True)
+        target_exp = tf.exp(target-max_axis)
+        normalize = tf.reduce_sum(target_exp, axis, keep_dims=True)
+        output = tf.div(target_exp, normalize, name=name)
+        return output
+    @layer
+    def prelu(self, input, name):
+        with tf.variable_scope(name) as scope:
+            i = int(input.getshape()[-1])
+            alpha = self.make_var('alpha', shape=(i,))
+            output = tf.nn.relu(input) + tf.multiply(alpha, -tf.nn.relu(-input))
+        return output
