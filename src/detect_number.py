@@ -34,6 +34,8 @@ class Network(object):
         self.setup()
     def setup(self):
         raise NotImplementedError('Must be implemented by the subclass.')
+    def get_output(self):
+        return self.terminals[-1]
     def get_unique_name(self, prefix):
         ident = sum(t.startwith(prefix) for t,_ in self.layers.item()) + 1
         return '%s_%d'%(prefix, ident)
@@ -99,3 +101,30 @@ class Network(object):
             alpha = self.make_var('alpha', shape=(i,))
             output = tf.nn.relu(input) + tf.multiply(alpha, -tf.nn.relu(-input))
         return output
+
+class PNet(Network):
+    def setup(self):
+        (self.feed('data')
+            .conv(3,2,10, 2,1,padding='VALID', relu=False, name='conv1')
+            .prelu(name='PRelu1')
+            .conv(3,3,16,1,1,padding='VALID', relu=False, name='conv2')
+            .prelu(name='PRelu2')
+            .conv(3,3,32,1,1,padding='VALID', relu=False, name='conv3')
+            .prelu(name='PRelu3')
+            .conv(1,1,2,1,1,padding='VALID', relu=False, name='conv4-1')
+            .softmax(3,name='prob1'))
+
+        (self.feed('PRelu3')
+            .conv(1,1,4,1,1,padding='VALID', relu=False, name='conv4-2'))
+
+def Network_loss(labels, prediction):
+    error_depth = tf.nn.softmax_cross_entropy_with_logits(labels=labels, logits=prediction)
+    cross_entropy = tf.reduce_mean(error_depth)
+    return cross_entropy
+def Network_train(the_loss, lr):
+    optimizer = tf.train.Optimizer(lr)
+    trainer = optimizer.minimize(the_loss)
+    return trainer
+def Train_PNet(input, label):
+    data = tf.placeholder(tf.float32, (None,None,None,3), 'input')
+    pnet = PNet({'data':data})
