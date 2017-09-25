@@ -3,6 +3,7 @@ This file will detect the number in the pictures
 '''
 
 import tensorflow as tf
+from six import string_types, iteritems
 
 def layer(op):
     def layer_decorated(self, *args, **kwargs):
@@ -22,9 +23,9 @@ def layer(op):
 
 
 class Network(object):
-    def __init__(self, inputs, labels, trainable=True):
+    def __init__(self, inputs, trainable=True):
         self.inputs = inputs
-        self.labels = labels
+        # self.labels = labels
         self.terminals = []
         #get the layer name
         self.layers = dict(inputs)
@@ -41,7 +42,20 @@ class Network(object):
         return '%s_%d'%(prefix, ident)
     def make_var(self, name, shape):
         "create a new tensorflow variable"
-        return tf.get_variable(name=name,validate_shape=shape, trainable=self.trainable)
+        initials = tf.truncated_normal(shape=shape, stddev=0.1)
+        return tf.Variable(initial_value=initials, name=name)
+        # return tf.get_variable(name=name,validate_shape=shape, trainable=self.trainable)
+    def feed(self, *args):
+        assert len(args) != 0
+        self.terminals = []
+        for feed_layers in args:
+            if isinstance(feed_layers, string_types):
+                try:
+                    feed_layers = self.layers[feed_layers]
+                except KeyError:
+                    raise KeyError('Unknown layer name fed: %s' % feed_layers)
+            self.terminals.append(feed_layers)
+        return self
     @layer
     def conv(self, input, k_h, k_w, c_o, s_h, s_w, name, relu=True, padding='SAME', group=1, biased=True):
         #verify the input padding is existing
@@ -61,7 +75,7 @@ class Network(object):
                 output = tf.nn.bias_add(output, biases)
             if relu:
                 output = tf.nn.relu(output, name=scope.name)
-            return output
+        return output
 
     @layer
     def pooling(self, input, k_h, k_w, s_h, s_w, name, padding='SAME'):
@@ -105,17 +119,25 @@ class Network(object):
 class PNet(Network):
     def setup(self):
         (self.feed('data')
-            .conv(3,2,10, 2,1,padding='VALID', relu=False, name='conv1')
-            .prelu(name='PRelu1')
-            .conv(3,3,16,1,1,padding='VALID', relu=False, name='conv2')
-            .prelu(name='PRelu2')
-            .conv(3,3,32,1,1,padding='VALID', relu=False, name='conv3')
-            .prelu(name='PRelu3')
-            .conv(1,1,2,1,1,padding='VALID', relu=False, name='conv4-1')
-            .softmax(3,name='prob1'))
+            .conv(3,2,10,2,1,padding='VALID', relu=False, name='conv1'))
+            # .prelu(name='PRelu1')
+            # .conv(3,3,16,1,1,padding='VALID', relu=False, name='conv2')
+            # .prelu(name='PRelu2')
+            # .conv(3,3,32,1,1,padding='VALID', relu=False, name='conv3')
+            # .prelu(name='PRelu3')
+            # .conv(1,1,2,1,1,padding='VALID', relu=False, name='conv4-1')
+            # .softmax(3,name='prob1'))
 
-        (self.feed('PRelu3')
-            .conv(1,1,4,1,1,padding='VALID', relu=False, name='conv4-2'))
+        # (self.feed('PRelu3')
+        #     .conv(1,1,4,1,1,padding='VALID', relu=False, name='conv4-2'))
+
+def CreateMTCNN(sess):
+    with tf.variable_scope('pnet'):
+        data = tf.placeholder(tf.float32, (None,None,None,3), 'input')
+        pnet = PNet({'data': data})
+        sess.run(tf.global_variables_initializer())
+    pnet_fun = lambda img: sess.run(('pnet/conv4-2/BiasAdd:0', 'pnet/prob1:0'), feed_dict={'pnet/input:0': img})
+    return pnet_fun
 
 def Network_loss(labels, prediction):
     error_depth = tf.nn.softmax_cross_entropy_with_logits(labels=labels, logits=prediction)
@@ -125,6 +147,8 @@ def Network_train(the_loss, lr):
     optimizer = tf.train.Optimizer(lr)
     trainer = optimizer.minimize(the_loss)
     return trainer
-def Train_PNet(input, label):
-    data = tf.placeholder(tf.float32, (None,None,None,3), 'input')
-    pnet = PNet({'data':data})
+def Train_PNet(sess, input, label, pnet):
+    prediction = pnet(input)
+    entropy_loss = Network_loss(labels=label, prediction=prediction)
+    net_trainer = Network_train(entropy_loss, 0.01)
+    sess.run(net_trainer)
