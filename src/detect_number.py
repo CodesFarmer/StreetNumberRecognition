@@ -10,7 +10,7 @@ def layer(op):
         #set the layer name
         name = kwargs.setdefault('name', self.get_unique_name(op.__name__))
         #Set the layer's input
-        if len(self.terminals == 1):
+        if len(self.terminals) == 1:
             layer_input = self.terminals[0]
         elif len(self.terminals == 0):
             raise RuntimeError("There does not exist input for layer %s"%name)
@@ -20,7 +20,8 @@ def layer(op):
         layer_output = op(self, layer_input, *args, **kwargs)
         #Set the layer
         self.layers[name] = layer_output
-
+        return self
+    return layer_decorated
 
 class Network(object):
     def __init__(self, inputs, trainable=True):
@@ -38,7 +39,7 @@ class Network(object):
     def get_output(self):
         return self.terminals[-1]
     def get_unique_name(self, prefix):
-        ident = sum(t.startwith(prefix) for t,_ in self.layers.item()) + 1
+        ident = sum(t.startswith(prefix) for t,_ in self.layers.items()) + 1
         return '%s_%d'%(prefix, ident)
     def make_var(self, name, shape):
         "create a new tensorflow variable"
@@ -60,7 +61,7 @@ class Network(object):
     def conv(self, input, k_h, k_w, c_o, s_h, s_w, name, relu=True, padding='SAME', group=1, biased=True):
         #verify the input padding is existing
         assert padding in ('SAME', 'VALID')
-        c_i = int(input.getshape()[-1])
+        c_i = int(input.get_shape()[-1])
         #where c_i is the channels of input feature map, and c_o is about output
         assert c_i%group == 0
         assert c_o%group == 0
@@ -71,7 +72,7 @@ class Network(object):
             kernel = self.make_var('weights', [k_h, k_w, c_i//group, c_o])
             output = convolve(input, kernel)
             if biased:
-                biases = self.make_var('biases', [1,1,1,c_o])
+                biases = self.make_var('biases', [c_o])
                 output = tf.nn.bias_add(output, biases)
             if relu:
                 output = tf.nn.relu(output, name=scope.name)
@@ -111,7 +112,7 @@ class Network(object):
     @layer
     def prelu(self, input, name):
         with tf.variable_scope(name) as scope:
-            i = int(input.getshape()[-1])
+            i = int(input.get_shape()[-1])
             alpha = self.make_var('alpha', shape=(i,))
             output = tf.nn.relu(input) + tf.multiply(alpha, -tf.nn.relu(-input))
         return output
@@ -119,14 +120,14 @@ class Network(object):
 class PNet(Network):
     def setup(self):
         (self.feed('data')
-            .conv(3,2,10,2,1,padding='VALID', relu=False, name='conv1'))
-            # .prelu(name='PRelu1')
-            # .conv(3,3,16,1,1,padding='VALID', relu=False, name='conv2')
-            # .prelu(name='PRelu2')
-            # .conv(3,3,32,1,1,padding='VALID', relu=False, name='conv3')
-            # .prelu(name='PRelu3')
-            # .conv(1,1,2,1,1,padding='VALID', relu=False, name='conv4-1')
-            # .softmax(3,name='prob1'))
+            .conv(3,2,10,2,1,padding='VALID', relu=False, name='conv1')
+            .prelu(name='PRelu1')
+            .conv(3,3,16,1,1,padding='VALID', relu=False, name='conv2')
+            .prelu(name='PRelu2')
+            .conv(3,3,32,1,1,padding='VALID', relu=False, name='conv3')
+            .prelu(name='PRelu3')
+            .conv(1,1,2,1,1,padding='VALID', relu=False, name='conv4-1')
+            .softmax(3,name='prob1'))
 
         # (self.feed('PRelu3')
         #     .conv(1,1,4,1,1,padding='VALID', relu=False, name='conv4-2'))
