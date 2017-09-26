@@ -10,16 +10,17 @@ def layer(op):
         #set the layer name
         name = kwargs.setdefault('name', self.get_unique_name(op.__name__))
         #Set the layer's input
-        if len(self.terminals) == 1:
-            layer_input = self.terminals[0]
-        elif len(self.terminals == 0):
+        if len(self.terminals) == 0:
             raise RuntimeError("There does not exist input for layer %s"%name)
+        elif len(self.terminals) == 1:
+            layer_input = self.terminals[0]
         else:
             layer_input = list(self.terminals)
         #Get the output through the layer
         layer_output = op(self, layer_input, *args, **kwargs)
         #Set the layer
         self.layers[name] = layer_output
+        self.feed(layer_output)
         return self
     return layer_decorated
 
@@ -129,27 +130,35 @@ class PNet(Network):
             .conv(1,1,2,1,1,padding='VALID', relu=False, name='conv4-1')
             .softmax(3,name='prob1'))
 
-        # (self.feed('PRelu3')
-        #     .conv(1,1,4,1,1,padding='VALID', relu=False, name='conv4-2'))
+        (self.feed('PRelu3')
+            .conv(1,1,4,1,1,padding='VALID', relu=False, name='conv4-2'))
 
 def CreateMTCNN(sess):
     with tf.variable_scope('pnet'):
         data = tf.placeholder(tf.float32, (None,None,None,3), 'input')
         pnet = PNet({'data': data})
         sess.run(tf.global_variables_initializer())
-    pnet_fun = lambda img: sess.run(('pnet/conv4-2/BiasAdd:0', 'pnet/prob1:0'), feed_dict={'pnet/input:0': img})
+    pnet_fun = lambda img: sess.run(('pnet/conv4-2/BiasAdd:0', 'pnet/conv4-1/BiasAdd:0'), feed_dict={'pnet/input:0': img})
     return pnet_fun
 
-def Network_loss(labels, prediction):
+def Network_loss_cla(labels, prediction):
     error_depth = tf.nn.softmax_cross_entropy_with_logits(labels=labels, logits=prediction)
     cross_entropy = tf.reduce_mean(error_depth)
     return cross_entropy
+def Network_loss_reg(labels, prediction):
+    wrong_dist = labels - prediction
+    wrong_dist = tf.multiply(wrong_dist, wrong_dist)
+    error_regression = tf.nn.reduce_mean(wrong_dist)
+    return error_regression
 def Network_train(the_loss, lr):
     optimizer = tf.train.Optimizer(lr)
     trainer = optimizer.minimize(the_loss)
     return trainer
 def Train_PNet(sess, input, label, pnet):
     prediction = pnet(input)
-    entropy_loss = Network_loss(labels=label, prediction=prediction)
-    net_trainer = Network_train(entropy_loss, 0.01)
+    prediction_cla = prediction[1]
+    prediction_reg = prediction[0]
+    entropy_loss_cla = Network_loss_cla(labels=label[1], prediction=prediction_cla)
+    euclidean_loss_reg = Network_loss_reg(labels=label[0], prediction=prediction_reg)
+    net_trainer = Network_train(entropy_loss_cla + 0.5*euclidean_loss_reg, 0.01)
     sess.run(net_trainer)
