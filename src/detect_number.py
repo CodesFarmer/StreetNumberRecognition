@@ -43,10 +43,8 @@ class Network(object):
         ident = sum(t.startswith(prefix) for t,_ in self.layers.items()) + 1
         return '%s_%d'%(prefix, ident)
     def make_var(self, name, shape):
-<<<<<<< HEAD
         #return the variables
         return tf.get_variable(name, shape, trainable=self.trainable)
-=======
         "create a new tensorflow variable"
         initials = tf.truncated_normal(shape=shape, stddev=0.1)
         return tf.Variable(initial_value=initials, name=name)
@@ -62,7 +60,6 @@ class Network(object):
                     raise KeyError('Unknown layer name fed: %s' % feed_layers)
             self.terminals.append(feed_layers)
         return self
->>>>>>> be57109f7be2694a1035366ba6bccf90e734ce67
     @layer
     def conv(self, input, k_h, k_w, c_o, s_h, s_w, name, relu=True, padding='SAME', group=1, biased=True):
         #verify the input padding is existing
@@ -75,7 +72,6 @@ class Network(object):
         convolve = lambda i,k: tf.nn.conv2d(i, k, [1, s_h, s_w, 1], padding=padding)
         #set the input and kernel for the convolutional layer
         with tf.variable_scope(name) as scope:
-<<<<<<< HEAD
             #scope is the scopes of variables
             kernel = self.make_var('weights', shape=[k_h, k_w, c_i/group, c_o])
             output = convolve(input, kernel)
@@ -86,19 +82,10 @@ class Network(object):
             if relu:
                 output = tf.nn.relu(output, name=scope.name)
             return output
-    @layer
-    def pooling(self, input, k_h, w_h, s_h, s_w, name, padding='SAME'):
-        assert padding in ('SAME', 'VALID')
-        return tf.nn.max_pool(input, ksize=[1, k_h, w_h, 1], strides=[1, s_h, s_w, 1], padding=padding, name=name)
-=======
-            kernel = self.make_var('weights', [k_h, k_w, c_i//group, c_o])
-            output = convolve(input, kernel)
-            if biased:
-                biases = self.make_var('biases', [c_o])
-                output = tf.nn.bias_add(output, biases)
-            if relu:
-                output = tf.nn.relu(output, name=scope.name)
-        return output
+    # @layer
+    # def pooling(self, input, k_h, w_h, s_h, s_w, name, padding='SAME'):
+    #     assert padding in ('SAME', 'VALID')
+    #     return tf.nn.max_pool(input, ksize=[1, k_h, w_h, 1], strides=[1, s_h, s_w, 1], padding=padding, name=name)
 
     @layer
     def pooling(self, input, k_h, k_w, s_h, s_w, name, padding='SAME'):
@@ -183,4 +170,3 @@ def Train_PNet(sess, input, label, pnet):
     euclidean_loss_reg = Network_loss_reg(labels=label[0], prediction=prediction_reg)
     net_trainer = Network_train(entropy_loss_cla + 0.5*euclidean_loss_reg, 0.01)
     sess.run(net_trainer)
->>>>>>> be57109f7be2694a1035366ba6bccf90e734ce67
