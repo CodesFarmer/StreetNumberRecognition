@@ -37,6 +37,9 @@ class Network(object):
     def get_unique_name(self, prefix):
         ident = sum(t.startwith(prefix) for t,_ in self.layers.item()) + 1
         return '%s_%d'%(prefix, ident)
+    def make_var(self, name, shape):
+        #return the variables
+        return tf.get_variable(name, shape, trainable=self.trainable)
     @layer
     def conv(self, input, k_h, k_w, c_o, s_h, s_w, name, relu=True, padding='SAME', group=1, biased=True):
         #verify the input padding is existing
@@ -49,4 +52,17 @@ class Network(object):
         convolve = lambda i,k: tf.nn.conv2d(i, k, [1, s_h, s_w, 1], padding=padding)
         #set the input and kernel for the convolutional layer
         with tf.variable_scope(name) as scope:
-            kernel = tf.
+            #scope is the scopes of variables
+            kernel = self.make_var('weights', shape=[k_h, k_w, c_i/group, c_o])
+            output = convolve(input, kernel)
+            #add the biases
+            if biased:
+                biases = self.make_var('biases', [c_o])
+                output = tf.nn.bias_add(output + biases)
+            if relu:
+                output = tf.nn.relu(output, name=scope.name)
+            return output
+    @layer
+    def pooling(self, input, k_h, w_h, s_h, s_w, name, padding='SAME'):
+        assert padding in ('SAME', 'VALID')
+        return tf.nn.max_pool(input, ksize=[1, k_h, w_h, 1], strides=[1, s_h, s_w, 1], padding=padding, name=name)
