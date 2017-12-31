@@ -1,1 +1,0 @@
-/home/slam/datasets/handdetect_sample/01/2/cam0/1509071465066352346.png
