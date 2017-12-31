@@ -1,0 +1,2483 @@
+{
+    "traceEvents": [
+        {
+            "name": "process_name",
+            "args": {
+                "name": "Allocators"
+            },
+            "pid": 0,
+            "ph": "M"
+        },
+        {
+            "name": "process_name",
+            "args": {
+                "name": "/job:localhost/replica:0/task:0/device:CPU:0 Compute"
+            },
+            "pid": 1,
+            "ph": "M"
+        },
+        {
+            "name": "process_name",
+            "args": {
+                "name": "/job:localhost/replica:0/task:0/device:CPU:0 Tensors"
+            },
+            "pid": 2,
+            "ph": "M"
+        },
+        {
+            "name": "NoOp",
+            "ts": 1513686564953041,
+            "cat": "Op",
+            "args": {
+                "name": "_SOURCE",
+                "op": "NoOp"
+            },
+            "pid": 1,
+            "ph": "X",
+            "tid": 0,
+            "dur": 29
+        },
+        {
+            "name": "Const",
+            "ts": 1513686564953110,
+            "cat": "Op",
+            "args": {
+                "name": "onet/prob/Reshape/shape",
+                "op": "Const"
+            },
+            "pid": 1,
+            "ph": "X",
+            "tid": 0,
+            "dur": 6
+        },
+        {
+            "name": "_Arg",
+            "ts": 1513686564953106,
+            "cat": "Op",
+            "args": {
+                "name": "_arg_onet/Placeholder_0_0",
+                "op": "_Arg"
+            },
+            "pid": 1,
+            "ph": "X",
+            "tid": 1,
+            "dur": 10
+        },
+        {
+            "name": "Const",
+            "ts": 1513686564953117,
+            "cat": "Op",
+            "args": {
+                "name": "onet/Max/reduction_indices",
+                "op": "Const"
+            },
+            "pid": 1,
+            "ph": "X",
+            "tid": 0,
+            "dur": 3
+        },
+        {
+            "name": "Const",
+            "ts": 1513686564953120,
+            "cat": "Op",
+            "args": {
+                "name": "onet/fc1/Reshape/shape",
+                "op": "Const"
+            },
+            "pid": 1,
+            "ph": "X",
+            "tid": 1,
+            "dur": 2
+        },
+        {
+            "name": "VariableV2",
+            "ts": 1513686564953119,
+            "cat": "Op",
+            "args": {
+                "name": "onet/prob/bias",
+                "op": "VariableV2"
+            },
+            "pid": 1,
+            "ph": "X",
+            "tid": 2,
+            "dur": 9
+        },
+        {
+            "name": "VariableV2",
+            "ts": 1513686564953123,
+            "cat": "Op",
+            "args": {
+                "name": "onet/coor/weight",
+                "op": "VariableV2"
+            },
+            "pid": 1,
+            "ph": "X",
+            "tid": 0,
+            "dur": 6
+        },
+        {
+            "name": "Identity",
+            "ts": 1513686564953129,
+            "cat": "Op",
+            "args": {
+                "name": "onet/prob/bias/read",
+                "op": "Identity",
+                "input0": "onet/prob/bias"
+            },
+            "pid": 1,
+            "ph": "X",
+            "tid": 1,
+            "dur": 2
+        },
+        {
+            "name": "onet/prob/bias",
+            "ts": 1513686564953128,
+            "cat": "DataFlow",
+            "pid": 1,
+            "ph": "s",
+            "tid": 2,
+            "id": 0
+        },
+        {
+            "name": "onet/prob/bias",
+            "ts": 1513686564953129,
+            "cat": "DataFlow",
+            "pid": 1,
+            "ph": "t",
+            "tid": 1,
+            "id": 0
+        },
+        {
+            "name": "VariableV2",
+            "ts": 1513686564953118,
+            "cat": "Op",
+            "args": {
+                "name": "onet/prob/weight",
+                "op": "VariableV2"
+            },
+            "pid": 1,
+            "ph": "X",
+            "tid": 3,
+            "dur": 13
+        },
+        {
+            "name": "Identity",
+            "ts": 1513686564953130,
+            "cat": "Op",
+            "args": {
+                "name": "onet/coor/weight/read",
+                "op": "Identity",
+                "input0": "onet/coor/weight"
+            },
+            "pid": 1,
+            "ph": "X",
+            "tid": 0,
+            "dur": 2
+        },
+        {
+            "name": "VariableV2",
+            "ts": 1513686564953132,
+            "cat": "Op",
+            "args": {
+                "name": "onet/coor/bias",
+                "op": "VariableV2"
+            },
+            "pid": 1,
+            "ph": "X",
+            "tid": 1,
+            "dur": 4
+        },
+        {
+            "name": "Identity",
+            "ts": 1513686564953134,
+            "cat": "Op",
+            "args": {
+                "name": "onet/prob/weight/read",
+                "op": "Identity",
+                "input0": "onet/prob/weight"
+            },
+            "pid": 1,
+            "ph": "X",
+            "tid": 0,
+            "dur": 3
+        },
+        {
+            "name": "onet/prob/weight",
+            "ts": 1513686564953131,
+            "cat": "DataFlow",
+            "pid": 1,
+            "ph": "s",
+            "tid": 3,
+            "id": 1
+        },
+        {
+            "name": "onet/prob/weight",
+            "ts": 1513686564953134,
+            "cat": "DataFlow",
+            "pid": 1,
+            "ph": "t",
+            "tid": 0,
+            "id": 1
+        },
+        {
+            "name": "Identity",
+            "ts": 1513686564953136,
+            "cat": "Op",
+            "args": {
+                "name": "onet/coor/bias/read",
+                "op": "Identity",
+                "input0": "onet/coor/bias"
+            },
+            "pid": 1,
+            "ph": "X",
+            "tid": 2,
+            "dur": 3
+        },
+        {
+            "name": "onet/coor/bias",
+            "ts": 1513686564953136,
+            "cat": "DataFlow",
+            "pid": 1,
+            "ph": "s",
+            "tid": 1,
+            "id": 2
+        },
+        {
+            "name": "onet/coor/bias",
+            "ts": 1513686564953136,
+            "cat": "DataFlow",
+            "pid": 1,
+            "ph": "t",
+            "tid": 2,
+            "id": 2
+        },
+        {
+            "name": "VariableV2",
+            "ts": 1513686564953140,
+            "cat": "Op",
+            "args": {
+                "name": "onet/conv1/weight",
+                "op": "VariableV2"
+            },
+            "pid": 1,
+            "ph": "X",
+            "tid": 0,
+            "dur": 3
+        },
+        {
+            "name": "Identity",
+            "ts": 1513686564953144,
+            "cat": "Op",
+            "args": {
+                "name": "onet/conv1/weight/read",
+                "op": "Identity",
+                "input0": "onet/conv1/weight"
+            },
+            "pid": 1,
+            "ph": "X",
+            "tid": 0,
+            "dur": 2
+        },
+        {
+            "name": "VariableV2",
+            "ts": 1513686564953144,
+            "cat": "Op",
+            "args": {
+                "name": "onet/conv1/bias",
+                "op": "VariableV2"
+            },
+            "pid": 1,
+            "ph": "X",
+            "tid": 1,
+            "dur": 3
+        },
+        {
+            "name": "VariableV2",
+            "ts": 1513686564953146,
+            "cat": "Op",
+            "args": {
+                "name": "onet/mbn1/dw_kernel",
+                "op": "VariableV2"
+            },
+            "pid": 1,
+            "ph": "X",
+            "tid": 2,
+            "dur": 4
+        },
+        {
+            "name": "VariableV2",
+            "ts": 1513686564953134,
+            "cat": "Op",
+            "args": {
+                "name": "onet/fc1/bias",
+                "op": "VariableV2"
+            },
+            "pid": 1,
+            "ph": "X",
+            "tid": 3,
+            "dur": 3
+        },
+        {
+            "name": "Identity",
+            "ts": 1513686564953152,
+            "cat": "Op",
+            "args": {
+                "name": "onet/mbn1/dw_kernel/read",
+                "op": "Identity",
+                "input0": "onet/mbn1/dw_kernel"
+            },
+            "pid": 1,
+            "ph": "X",
+            "tid": 0,
+            "dur": 2
+        },
+        {
+            "name": "onet/mbn1/dw_kernel",
+            "ts": 1513686564953150,
+            "cat": "DataFlow",
+            "pid": 1,
+            "ph": "s",
+            "tid": 2,
+            "id": 3
+        },
+        {
+            "name": "onet/mbn1/dw_kernel",
+            "ts": 1513686564953152,
+            "cat": "DataFlow",
+            "pid": 1,
+            "ph": "t",
+            "tid": 0,
+            "id": 3
+        },
+        {
+            "name": "Identity",
+            "ts": 1513686564953156,
+            "cat": "Op",
+            "args": {
+                "name": "onet/fc1/bias/read",
+                "op": "Identity",
+                "input0": "onet/fc1/bias"
+            },
+            "pid": 1,
+            "ph": "X",
+            "tid": 0,
+            "dur": 3
+        },
+        {
+            "name": "onet/fc1/bias",
+            "ts": 1513686564953137,
+            "cat": "DataFlow",
+            "pid": 1,
+            "ph": "s",
+            "tid": 3,
+            "id": 4
+        },
+        {
+            "name": "onet/fc1/bias",
+            "ts": 1513686564953156,
+            "cat": "DataFlow",
+            "pid": 1,
+            "ph": "t",
+            "tid": 0,
+            "id": 4
+        },
+        {
+            "name": "VariableV2",
+            "ts": 1513686564953156,
+            "cat": "Op",
+            "args": {
+                "name": "onet/mbn1/batch_normalization/gamma",
+                "op": "VariableV2"
+            },
+            "pid": 1,
+            "ph": "X",
+            "tid": 1,
+            "dur": 3
+        },
+        {
+            "name": "VariableV2",
+            "ts": 1513686564953160,
+            "cat": "Op",
+            "args": {
+                "name": "onet/fc1/weight",
+                "op": "VariableV2"
+            },
+            "pid": 1,
+            "ph": "X",
+            "tid": 0,
+            "dur": 3
+        },
+        {
+            "name": "Identity",
+            "ts": 1513686564953160,
+            "cat": "Op",
+            "args": {
+                "name": "onet/mbn1/batch_normalization/gamma/read",
+                "op": "Identity",
+                "input0": "onet/mbn1/batch_normalization/gamma"
+            },
+            "pid": 1,
+            "ph": "X",
+            "tid": 1,
+            "dur": 5
+        },
+        {
+            "name": "Identity",
+            "ts": 1513686564953148,
+            "cat": "Op",
+            "args": {
+                "name": "onet/conv1/bias/read",
+                "op": "Identity",
+                "input0": "onet/conv1/bias"
+            },
+            "pid": 1,
+            "ph": "X",
+            "tid": 3,
+            "dur": 2
+        },
+        {
+            "name": "onet/conv1/bias",
+            "ts": 1513686564953147,
+            "cat": "DataFlow",
+            "pid": 1,
+            "ph": "s",
+            "tid": 1,
+            "id": 5
+        },
+        {
+            "name": "onet/conv1/bias",
+            "ts": 1513686564953148,
+            "cat": "DataFlow",
+            "pid": 1,
+            "ph": "t",
+            "tid": 3,
+            "id": 5
+        },
+        {
+            "name": "VariableV2",
+            "ts": 1513686564953167,
+            "cat": "Op",
+            "args": {
+                "name": "onet/mbn1/batch_normalization/beta",
+                "op": "VariableV2"
+            },
+            "pid": 1,
+            "ph": "X",
+            "tid": 0,
+            "dur": 3
+        },
+        {
+            "name": "VariableV2",
+            "ts": 1513686564953169,
+            "cat": "Op",
+            "args": {
+                "name": "onet/mbn1/batch_normalization/moving_mean",
+                "op": "VariableV2"
+            },
+            "pid": 1,
+            "ph": "X",
+            "tid": 1,
+            "dur": 4
+        },
+        {
+            "name": "Identity",
+            "ts": 1513686564953171,
+            "cat": "Op",
+            "args": {
+                "name": "onet/mbn1/batch_normalization/beta/read",
+                "op": "Identity",
+                "input0": "onet/mbn1/batch_normalization/beta"
+            },
+            "pid": 1,
+            "ph": "X",
+            "tid": 0,
+            "dur": 2
+        },
+        {
+            "name": "Identity",
+            "ts": 1513686564953174,
+            "cat": "Op",
+            "args": {
+                "name": "onet/mbn1/batch_normalization/moving_mean/read",
+                "op": "Identity",
+                "input0": "onet/mbn1/batch_normalization/moving_mean"
+            },
+            "pid": 1,
+            "ph": "X",
+            "tid": 0,
+            "dur": 2
+        },
+        {
+            "name": "onet/mbn1/batch_normalization/moving_mean",
+            "ts": 1513686564953173,
+            "cat": "DataFlow",
+            "pid": 1,
+            "ph": "s",
+            "tid": 1,
+            "id": 6
+        },
+        {
+            "name": "onet/mbn1/batch_normalization/moving_mean",
+            "ts": 1513686564953174,
+            "cat": "DataFlow",
+            "pid": 1,
+            "ph": "t",
+            "tid": 0,
+            "id": 6
+        },
+        {
+            "name": "VariableV2",
+            "ts": 1513686564953175,
+            "cat": "Op",
+            "args": {
+                "name": "onet/mbn1/batch_normalization/moving_variance",
+                "op": "VariableV2"
+            },
+            "pid": 1,
+            "ph": "X",
+            "tid": 1,
+            "dur": 3
+        },
+        {
+            "name": "Identity",
+            "ts": 1513686564953178,
+            "cat": "Op",
+            "args": {
+                "name": "onet/mbn1/batch_normalization/moving_variance/read",
+                "op": "Identity",
+                "input0": "onet/mbn1/batch_normalization/moving_variance"
+            },
+            "pid": 1,
+            "ph": "X",
+            "tid": 0,
+            "dur": 2
+        },
+        {
+            "name": "onet/mbn1/batch_normalization/moving_variance",
+            "ts": 1513686564953178,
+            "cat": "DataFlow",
+            "pid": 1,
+            "ph": "s",
+            "tid": 1,
+            "id": 7
+        },
+        {
+            "name": "onet/mbn1/batch_normalization/moving_variance",
+            "ts": 1513686564953178,
+            "cat": "DataFlow",
+            "pid": 1,
+            "ph": "t",
+            "tid": 0,
+            "id": 7
+        },
+        {
+            "name": "Identity",
+            "ts": 1513686564953163,
+            "cat": "Op",
+            "args": {
+                "name": "onet/fc1/weight/read",
+                "op": "Identity",
+                "input0": "onet/fc1/weight"
+            },
+            "pid": 1,
+            "ph": "X",
+            "tid": 2,
+            "dur": 2
+        },
+        {
+            "name": "onet/fc1/weight",
+            "ts": 1513686564953163,
+            "cat": "DataFlow",
+            "pid": 1,
+            "ph": "s",
+            "tid": 0,
+            "id": 8
+        },
+        {
+            "name": "onet/fc1/weight",
+            "ts": 1513686564953163,
+            "cat": "DataFlow",
+            "pid": 1,
+            "ph": "t",
+            "tid": 2,
+            "id": 8
+        },
+        {
+            "name": "VariableV2",
+            "ts": 1513686564953182,
+            "cat": "Op",
+            "args": {
+                "name": "onet/mbn1/batch_normalization_1/gamma",
+                "op": "VariableV2"
+            },
+            "pid": 1,
+            "ph": "X",
+            "tid": 0,
+            "dur": 3
+        },
+        {
+            "name": "VariableV2",
+            "ts": 1513686564953184,
+            "cat": "Op",
+            "args": {
+                "name": "onet/mbn3/batch_normalization_1/moving_variance",
+                "op": "VariableV2"
+            },
+            "pid": 1,
+            "ph": "X",
+            "tid": 1,
+            "dur": 3
+        },
+        {
+            "name": "Identity",
+            "ts": 1513686564953188,
+            "cat": "Op",
+            "args": {
+                "name": "onet/mbn3/batch_normalization_1/moving_variance/read",
+                "op": "Identity",
+                "input0": "onet/mbn3/batch_normalization_1/moving_variance"
+            },
+            "pid": 1,
+            "ph": "X",
+            "tid": 0,
+            "dur": 2
+        },
+        {
+            "name": "onet/mbn3/batch_normalization_1/moving_variance",
+            "ts": 1513686564953187,
+            "cat": "DataFlow",
+            "pid": 1,
+            "ph": "s",
+            "tid": 1,
+            "id": 9
+        },
+        {
+            "name": "onet/mbn3/batch_normalization_1/moving_variance",
+            "ts": 1513686564953188,
+            "cat": "DataFlow",
+            "pid": 1,
+            "ph": "t",
+            "tid": 0,
+            "id": 9
+        },
+        {
+            "name": "VariableV2",
+            "ts": 1513686564953191,
+            "cat": "Op",
+            "args": {
+                "name": "onet/mbn3/batch_normalization_1/moving_mean",
+                "op": "VariableV2"
+            },
+            "pid": 1,
+            "ph": "X",
+            "tid": 0,
+            "dur": 3
+        },
+        {
+            "name": "Identity",
+            "ts": 1513686564953194,
+            "cat": "Op",
+            "args": {
+                "name": "onet/mbn3/batch_normalization_1/moving_mean/read",
+                "op": "Identity",
+                "input0": "onet/mbn3/batch_normalization_1/moving_mean"
+            },
+            "pid": 1,
+            "ph": "X",
+            "tid": 1,
+            "dur": 2
+        },
+        {
+            "name": "onet/mbn3/batch_normalization_1/moving_mean",
+            "ts": 1513686564953194,
+            "cat": "DataFlow",
+            "pid": 1,
+            "ph": "s",
+            "tid": 0,
+            "id": 10
+        },
+        {
+            "name": "onet/mbn3/batch_normalization_1/moving_mean",
+            "ts": 1513686564953194,
+            "cat": "DataFlow",
+            "pid": 1,
+            "ph": "t",
+            "tid": 1,
+            "id": 10
+        },
+        {
+            "name": "VariableV2",
+            "ts": 1513686564953197,
+            "cat": "Op",
+            "args": {
+                "name": "onet/mbn3/batch_normalization_1/beta",
+                "op": "VariableV2"
+            },
+            "pid": 1,
+            "ph": "X",
+            "tid": 0,
+            "dur": 2
+        },
+        {
+            "name": "Identity",
+            "ts": 1513686564953200,
+            "cat": "Op",
+            "args": {
+                "name": "onet/mbn3/batch_normalization_1/beta/read",
+                "op": "Identity",
+                "input0": "onet/mbn3/batch_normalization_1/beta"
+            },
+            "pid": 1,
+            "ph": "X",
+            "tid": 0,
+            "dur": 2
+        },
+        {
+            "name": "VariableV2",
+            "ts": 1513686564953203,
+            "cat": "Op",
+            "args": {
+                "name": "onet/mbn3/batch_normalization_1/gamma",
+                "op": "VariableV2"
+            },
+            "pid": 1,
+            "ph": "X",
+            "tid": 0,
+            "dur": 3
+        },
+        {
+            "name": "Identity",
+            "ts": 1513686564953206,
+            "cat": "Op",
+            "args": {
+                "name": "onet/mbn3/batch_normalization_1/gamma/read",
+                "op": "Identity",
+                "input0": "onet/mbn3/batch_normalization_1/gamma"
+            },
+            "pid": 1,
+            "ph": "X",
+            "tid": 1,
+            "dur": 2
+        },
+        {
+            "name": "onet/mbn3/batch_normalization_1/gamma",
+            "ts": 1513686564953206,
+            "cat": "DataFlow",
+            "pid": 1,
+            "ph": "s",
+            "tid": 0,
+            "id": 11
+        },
+        {
+            "name": "onet/mbn3/batch_normalization_1/gamma",
+            "ts": 1513686564953206,
+            "cat": "DataFlow",
+            "pid": 1,
+            "ph": "t",
+            "tid": 1,
+            "id": 11
+        },
+        {
+            "name": "VariableV2",
+            "ts": 1513686564953209,
+            "cat": "Op",
+            "args": {
+                "name": "onet/mbn3/weight",
+                "op": "VariableV2"
+            },
+            "pid": 1,
+            "ph": "X",
+            "tid": 0,
+            "dur": 3
+        },
+        {
+            "name": "Identity",
+            "ts": 1513686564953212,
+            "cat": "Op",
+            "args": {
+                "name": "onet/mbn3/weight/read",
+                "op": "Identity",
+                "input0": "onet/mbn3/weight"
+            },
+            "pid": 1,
+            "ph": "X",
+            "tid": 1,
+            "dur": 2
+        },
+        {
+            "name": "onet/mbn3/weight",
+            "ts": 1513686564953212,
+            "cat": "DataFlow",
+            "pid": 1,
+            "ph": "s",
+            "tid": 0,
+            "id": 12
+        },
+        {
+            "name": "onet/mbn3/weight",
+            "ts": 1513686564953212,
+            "cat": "DataFlow",
+            "pid": 1,
+            "ph": "t",
+            "tid": 1,
+            "id": 12
+        },
+        {
+            "name": "VariableV2",
+            "ts": 1513686564953215,
+            "cat": "Op",
+            "args": {
+                "name": "onet/mbn3/batch_normalization/moving_variance",
+                "op": "VariableV2"
+            },
+            "pid": 1,
+            "ph": "X",
+            "tid": 0,
+            "dur": 2
+        },
+        {
+            "name": "Identity",
+            "ts": 1513686564953218,
+            "cat": "Op",
+            "args": {
+                "name": "onet/mbn3/batch_normalization/moving_variance/read",
+                "op": "Identity",
+                "input0": "onet/mbn3/batch_normalization/moving_variance"
+            },
+            "pid": 1,
+            "ph": "X",
+            "tid": 0,
+            "dur": 2
+        },
+        {
+            "name": "VariableV2",
+            "ts": 1513686564953220,
+            "cat": "Op",
+            "args": {
+                "name": "onet/mbn3/batch_normalization/moving_mean",
+                "op": "VariableV2"
+            },
+            "pid": 1,
+            "ph": "X",
+            "tid": 1,
+            "dur": 3
+        },
+        {
+            "name": "Identity",
+            "ts": 1513686564953223,
+            "cat": "Op",
+            "args": {
+                "name": "onet/mbn3/batch_normalization/moving_mean/read",
+                "op": "Identity",
+                "input0": "onet/mbn3/batch_normalization/moving_mean"
+            },
+            "pid": 1,
+            "ph": "X",
+            "tid": 0,
+            "dur": 2
+        },
+        {
+            "name": "onet/mbn3/batch_normalization/moving_mean",
+            "ts": 1513686564953223,
+            "cat": "DataFlow",
+            "pid": 1,
+            "ph": "s",
+            "tid": 1,
+            "id": 13
+        },
+        {
+            "name": "onet/mbn3/batch_normalization/moving_mean",
+            "ts": 1513686564953223,
+            "cat": "DataFlow",
+            "pid": 1,
+            "ph": "t",
+            "tid": 0,
+            "id": 13
+        },
+        {
+            "name": "VariableV2",
+            "ts": 1513686564953226,
+            "cat": "Op",
+            "args": {
+                "name": "onet/mbn3/batch_normalization/beta",
+                "op": "VariableV2"
+            },
+            "pid": 1,
+            "ph": "X",
+            "tid": 0,
+            "dur": 2
+        },
+        {
+            "name": "Identity",
+            "ts": 1513686564953229,
+            "cat": "Op",
+            "args": {
+                "name": "onet/mbn3/batch_normalization/beta/read",
+                "op": "Identity",
+                "input0": "onet/mbn3/batch_normalization/beta"
+            },
+            "pid": 1,
+            "ph": "X",
+            "tid": 0,
+            "dur": 1
+        },
+        {
+            "name": "VariableV2",
+            "ts": 1513686564953231,
+            "cat": "Op",
+            "args": {
+                "name": "onet/mbn3/batch_normalization/gamma",
+                "op": "VariableV2"
+            },
+            "pid": 1,
+            "ph": "X",
+            "tid": 0,
+            "dur": 3
+        },
+        {
+            "name": "Identity",
+            "ts": 1513686564953234,
+            "cat": "Op",
+            "args": {
+                "name": "onet/mbn3/batch_normalization/gamma/read",
+                "op": "Identity",
+                "input0": "onet/mbn3/batch_normalization/gamma"
+            },
+            "pid": 1,
+            "ph": "X",
+            "tid": 1,
+            "dur": 2
+        },
+        {
+            "name": "onet/mbn3/batch_normalization/gamma",
+            "ts": 1513686564953234,
+            "cat": "DataFlow",
+            "pid": 1,
+            "ph": "s",
+            "tid": 0,
+            "id": 14
+        },
+        {
+            "name": "onet/mbn3/batch_normalization/gamma",
+            "ts": 1513686564953234,
+            "cat": "DataFlow",
+            "pid": 1,
+            "ph": "t",
+            "tid": 1,
+            "id": 14
+        },
+        {
+            "name": "VariableV2",
+            "ts": 1513686564953237,
+            "cat": "Op",
+            "args": {
+                "name": "onet/mbn3/dw_kernel",
+                "op": "VariableV2"
+            },
+            "pid": 1,
+            "ph": "X",
+            "tid": 0,
+            "dur": 2
+        },
+        {
+            "name": "Identity",
+            "ts": 1513686564953240,
+            "cat": "Op",
+            "args": {
+                "name": "onet/mbn3/dw_kernel/read",
+                "op": "Identity",
+                "input0": "onet/mbn3/dw_kernel"
+            },
+            "pid": 1,
+            "ph": "X",
+            "tid": 0,
+            "dur": 2
+        },
+        {
+            "name": "VariableV2",
+            "ts": 1513686564953242,
+            "cat": "Op",
+            "args": {
+                "name": "onet/mbn2/batch_normalization_1/moving_variance",
+                "op": "VariableV2"
+            },
+            "pid": 1,
+            "ph": "X",
+            "tid": 1,
+            "dur": 3
+        },
+        {
+            "name": "Identity",
+            "ts": 1513686564953245,
+            "cat": "Op",
+            "args": {
+                "name": "onet/mbn2/batch_normalization_1/moving_variance/read",
+                "op": "Identity",
+                "input0": "onet/mbn2/batch_normalization_1/moving_variance"
+            },
+            "pid": 1,
+            "ph": "X",
+            "tid": 0,
+            "dur": 2
+        },
+        {
+            "name": "onet/mbn2/batch_normalization_1/moving_variance",
+            "ts": 1513686564953245,
+            "cat": "DataFlow",
+            "pid": 1,
+            "ph": "s",
+            "tid": 1,
+            "id": 15
+        },
+        {
+            "name": "onet/mbn2/batch_normalization_1/moving_variance",
+            "ts": 1513686564953245,
+            "cat": "DataFlow",
+            "pid": 1,
+            "ph": "t",
+            "tid": 0,
+            "id": 15
+        },
+        {
+            "name": "VariableV2",
+            "ts": 1513686564953248,
+            "cat": "Op",
+            "args": {
+                "name": "onet/mbn2/batch_normalization_1/moving_mean",
+                "op": "VariableV2"
+            },
+            "pid": 1,
+            "ph": "X",
+            "tid": 0,
+            "dur": 2
+        },
+        {
+            "name": "Identity",
+            "ts": 1513686564953251,
+            "cat": "Op",
+            "args": {
+                "name": "onet/mbn2/batch_normalization_1/moving_mean/read",
+                "op": "Identity",
+                "input0": "onet/mbn2/batch_normalization_1/moving_mean"
+            },
+            "pid": 1,
+            "ph": "X",
+            "tid": 0,
+            "dur": 1
+        },
+        {
+            "name": "VariableV2",
+            "ts": 1513686564953253,
+            "cat": "Op",
+            "args": {
+                "name": "onet/mbn2/batch_normalization_1/beta",
+                "op": "VariableV2"
+            },
+            "pid": 1,
+            "ph": "X",
+            "tid": 0,
+            "dur": 3
+        },
+        {
+            "name": "Identity",
+            "ts": 1513686564953256,
+            "cat": "Op",
+            "args": {
+                "name": "onet/mbn2/batch_normalization_1/beta/read",
+                "op": "Identity",
+                "input0": "onet/mbn2/batch_normalization_1/beta"
+            },
+            "pid": 1,
+            "ph": "X",
+            "tid": 1,
+            "dur": 2
+        },
+        {
+            "name": "onet/mbn2/batch_normalization_1/beta",
+            "ts": 1513686564953256,
+            "cat": "DataFlow",
+            "pid": 1,
+            "ph": "s",
+            "tid": 0,
+            "id": 16
+        },
+        {
+            "name": "onet/mbn2/batch_normalization_1/beta",
+            "ts": 1513686564953256,
+            "cat": "DataFlow",
+            "pid": 1,
+            "ph": "t",
+            "tid": 1,
+            "id": 16
+        },
+        {
+            "name": "VariableV2",
+            "ts": 1513686564953259,
+            "cat": "Op",
+            "args": {
+                "name": "onet/mbn2/batch_normalization_1/gamma",
+                "op": "VariableV2"
+            },
+            "pid": 1,
+            "ph": "X",
+            "tid": 0,
+            "dur": 2
+        },
+        {
+            "name": "Identity",
+            "ts": 1513686564953262,
+            "cat": "Op",
+            "args": {
+                "name": "onet/mbn2/batch_normalization_1/gamma/read",
+                "op": "Identity",
+                "input0": "onet/mbn2/batch_normalization_1/gamma"
+            },
+            "pid": 1,
+            "ph": "X",
+            "tid": 0,
+            "dur": 2
+        },
+        {
+            "name": "VariableV2",
+            "ts": 1513686564953264,
+            "cat": "Op",
+            "args": {
+                "name": "onet/mbn2/weight",
+                "op": "VariableV2"
+            },
+            "pid": 1,
+            "ph": "X",
+            "tid": 1,
+            "dur": 3
+        },
+        {
+            "name": "Identity",
+            "ts": 1513686564953268,
+            "cat": "Op",
+            "args": {
+                "name": "onet/mbn2/weight/read",
+                "op": "Identity",
+                "input0": "onet/mbn2/weight"
+            },
+            "pid": 1,
+            "ph": "X",
+            "tid": 0,
+            "dur": 1
+        },
+        {
+            "name": "onet/mbn2/weight",
+            "ts": 1513686564953267,
+            "cat": "DataFlow",
+            "pid": 1,
+            "ph": "s",
+            "tid": 1,
+            "id": 17
+        },
+        {
+            "name": "onet/mbn2/weight",
+            "ts": 1513686564953268,
+            "cat": "DataFlow",
+            "pid": 1,
+            "ph": "t",
+            "tid": 0,
+            "id": 17
+        },
+        {
+            "name": "VariableV2",
+            "ts": 1513686564953270,
+            "cat": "Op",
+            "args": {
+                "name": "onet/mbn2/batch_normalization/moving_variance",
+                "op": "VariableV2"
+            },
+            "pid": 1,
+            "ph": "X",
+            "tid": 0,
+            "dur": 3
+        },
+        {
+            "name": "Identity",
+            "ts": 1513686564953273,
+            "cat": "Op",
+            "args": {
+                "name": "onet/mbn2/batch_normalization/moving_variance/read",
+                "op": "Identity",
+                "input0": "onet/mbn2/batch_normalization/moving_variance"
+            },
+            "pid": 1,
+            "ph": "X",
+            "tid": 1,
+            "dur": 2
+        },
+        {
+            "name": "onet/mbn2/batch_normalization/moving_variance",
+            "ts": 1513686564953273,
+            "cat": "DataFlow",
+            "pid": 1,
+            "ph": "s",
+            "tid": 0,
+            "id": 18
+        },
+        {
+            "name": "onet/mbn2/batch_normalization/moving_variance",
+            "ts": 1513686564953273,
+            "cat": "DataFlow",
+            "pid": 1,
+            "ph": "t",
+            "tid": 1,
+            "id": 18
+        },
+        {
+            "name": "VariableV2",
+            "ts": 1513686564953276,
+            "cat": "Op",
+            "args": {
+                "name": "onet/mbn2/batch_normalization/moving_mean",
+                "op": "VariableV2"
+            },
+            "pid": 1,
+            "ph": "X",
+            "tid": 0,
+            "dur": 2
+        },
+        {
+            "name": "Identity",
+            "ts": 1513686564953279,
+            "cat": "Op",
+            "args": {
+                "name": "onet/mbn2/batch_normalization/moving_mean/read",
+                "op": "Identity",
+                "input0": "onet/mbn2/batch_normalization/moving_mean"
+            },
+            "pid": 1,
+            "ph": "X",
+            "tid": 0,
+            "dur": 2
+        },
+        {
+            "name": "VariableV2",
+            "ts": 1513686564953282,
+            "cat": "Op",
+            "args": {
+                "name": "onet/mbn2/batch_normalization/beta",
+                "op": "VariableV2"
+            },
+            "pid": 1,
+            "ph": "X",
+            "tid": 0,
+            "dur": 2
+        },
+        {
+            "name": "Identity",
+            "ts": 1513686564953285,
+            "cat": "Op",
+            "args": {
+                "name": "onet/mbn2/batch_normalization/beta/read",
+                "op": "Identity",
+                "input0": "onet/mbn2/batch_normalization/beta"
+            },
+            "pid": 1,
+            "ph": "X",
+            "tid": 0,
+            "dur": 1
+        },
+        {
+            "name": "VariableV2",
+            "ts": 1513686564953287,
+            "cat": "Op",
+            "args": {
+                "name": "onet/mbn2/batch_normalization/gamma",
+                "op": "VariableV2"
+            },
+            "pid": 1,
+            "ph": "X",
+            "tid": 0,
+            "dur": 3
+        },
+        {
+            "name": "Identity",
+            "ts": 1513686564953290,
+            "cat": "Op",
+            "args": {
+                "name": "onet/mbn2/batch_normalization/gamma/read",
+                "op": "Identity",
+                "input0": "onet/mbn2/batch_normalization/gamma"
+            },
+            "pid": 1,
+            "ph": "X",
+            "tid": 1,
+            "dur": 2
+        },
+        {
+            "name": "onet/mbn2/batch_normalization/gamma",
+            "ts": 1513686564953290,
+            "cat": "DataFlow",
+            "pid": 1,
+            "ph": "s",
+            "tid": 0,
+            "id": 19
+        },
+        {
+            "name": "onet/mbn2/batch_normalization/gamma",
+            "ts": 1513686564953290,
+            "cat": "DataFlow",
+            "pid": 1,
+            "ph": "t",
+            "tid": 1,
+            "id": 19
+        },
+        {
+            "name": "VariableV2",
+            "ts": 1513686564953293,
+            "cat": "Op",
+            "args": {
+                "name": "onet/mbn2/dw_kernel",
+                "op": "VariableV2"
+            },
+            "pid": 1,
+            "ph": "X",
+            "tid": 0,
+            "dur": 3
+        },
+        {
+            "name": "Identity",
+            "ts": 1513686564953296,
+            "cat": "Op",
+            "args": {
+                "name": "onet/mbn2/dw_kernel/read",
+                "op": "Identity",
+                "input0": "onet/mbn2/dw_kernel"
+            },
+            "pid": 1,
+            "ph": "X",
+            "tid": 1,
+            "dur": 2
+        },
+        {
+            "name": "onet/mbn2/dw_kernel",
+            "ts": 1513686564953296,
+            "cat": "DataFlow",
+            "pid": 1,
+            "ph": "s",
+            "tid": 0,
+            "id": 20
+        },
+        {
+            "name": "onet/mbn2/dw_kernel",
+            "ts": 1513686564953296,
+            "cat": "DataFlow",
+            "pid": 1,
+            "ph": "t",
+            "tid": 1,
+            "id": 20
+        },
+        {
+            "name": "VariableV2",
+            "ts": 1513686564953299,
+            "cat": "Op",
+            "args": {
+                "name": "onet/mbn1/batch_normalization_1/moving_variance",
+                "op": "VariableV2"
+            },
+            "pid": 1,
+            "ph": "X",
+            "tid": 0,
+            "dur": 2
+        },
+        {
+            "name": "Identity",
+            "ts": 1513686564953302,
+            "cat": "Op",
+            "args": {
+                "name": "onet/mbn1/batch_normalization_1/moving_variance/read",
+                "op": "Identity",
+                "input0": "onet/mbn1/batch_normalization_1/moving_variance"
+            },
+            "pid": 1,
+            "ph": "X",
+            "tid": 0,
+            "dur": 1
+        },
+        {
+            "name": "VariableV2",
+            "ts": 1513686564953304,
+            "cat": "Op",
+            "args": {
+                "name": "onet/mbn1/batch_normalization_1/moving_mean",
+                "op": "VariableV2"
+            },
+            "pid": 1,
+            "ph": "X",
+            "tid": 0,
+            "dur": 3
+        },
+        {
+            "name": "Identity",
+            "ts": 1513686564953307,
+            "cat": "Op",
+            "args": {
+                "name": "onet/mbn1/batch_normalization_1/moving_mean/read",
+                "op": "Identity",
+                "input0": "onet/mbn1/batch_normalization_1/moving_mean"
+            },
+            "pid": 1,
+            "ph": "X",
+            "tid": 1,
+            "dur": 2
+        },
+        {
+            "name": "onet/mbn1/batch_normalization_1/moving_mean",
+            "ts": 1513686564953307,
+            "cat": "DataFlow",
+            "pid": 1,
+            "ph": "s",
+            "tid": 0,
+            "id": 21
+        },
+        {
+            "name": "onet/mbn1/batch_normalization_1/moving_mean",
+            "ts": 1513686564953307,
+            "cat": "DataFlow",
+            "pid": 1,
+            "ph": "t",
+            "tid": 1,
+            "id": 21
+        },
+        {
+            "name": "VariableV2",
+            "ts": 1513686564953310,
+            "cat": "Op",
+            "args": {
+                "name": "onet/mbn1/batch_normalization_1/beta",
+                "op": "VariableV2"
+            },
+            "pid": 1,
+            "ph": "X",
+            "tid": 0,
+            "dur": 2
+        },
+        {
+            "name": "Identity",
+            "ts": 1513686564953313,
+            "cat": "Op",
+            "args": {
+                "name": "onet/mbn1/batch_normalization_1/beta/read",
+                "op": "Identity",
+                "input0": "onet/mbn1/batch_normalization_1/beta"
+            },
+            "pid": 1,
+            "ph": "X",
+            "tid": 0,
+            "dur": 1
+        },
+        {
+            "name": "VariableV2",
+            "ts": 1513686564953177,
+            "cat": "Op",
+            "args": {
+                "name": "onet/mbn1/weight",
+                "op": "VariableV2"
+            },
+            "pid": 1,
+            "ph": "X",
+            "tid": 2,
+            "dur": 3
+        },
+        {
+            "name": "Identity",
+            "ts": 1513686564953363,
+            "cat": "Op",
+            "args": {
+                "name": "onet/mbn1/weight/read",
+                "op": "Identity",
+                "input0": "onet/mbn1/weight"
+            },
+            "pid": 1,
+            "ph": "X",
+            "tid": 0,
+            "dur": 2
+        },
+        {
+            "name": "onet/mbn1/weight",
+            "ts": 1513686564953180,
+            "cat": "DataFlow",
+            "pid": 1,
+            "ph": "s",
+            "tid": 2,
+            "id": 22
+        },
+        {
+            "name": "onet/mbn1/weight",
+            "ts": 1513686564953363,
+            "cat": "DataFlow",
+            "pid": 1,
+            "ph": "t",
+            "tid": 0,
+            "id": 22
+        },
+        {
+            "name": "Conv2D",
+            "ts": 1513686564953147,
+            "cat": "Op",
+            "args": {
+                "name": "onet/conv1/Conv2D",
+                "op": "Conv2D",
+                "input1": "onet/conv1/weight/read",
+                "input0": "_arg_onet/Placeholder_0_0"
+            },
+            "pid": 1,
+            "ph": "X",
+            "tid": 4,
+            "dur": 243
+        },
+        {
+            "name": "_arg_onet/Placeholder_0_0",
+            "ts": 1513686564953116,
+            "cat": "DataFlow",
+            "pid": 1,
+            "ph": "s",
+            "tid": 1,
+            "id": 23
+        },
+        {
+            "name": "_arg_onet/Placeholder_0_0",
+            "ts": 1513686564953147,
+            "cat": "DataFlow",
+            "pid": 1,
+            "ph": "t",
+            "tid": 4,
+            "id": 23
+        },
+        {
+            "name": "onet/conv1/weight/read",
+            "ts": 1513686564953146,
+            "cat": "DataFlow",
+            "pid": 1,
+            "ph": "s",
+            "tid": 0,
+            "id": 24
+        },
+        {
+            "name": "onet/conv1/weight/read",
+            "ts": 1513686564953147,
+            "cat": "DataFlow",
+            "pid": 1,
+            "ph": "t",
+            "tid": 4,
+            "id": 24
+        },
+        {
+            "name": "Identity",
+            "ts": 1513686564953185,
+            "cat": "Op",
+            "args": {
+                "name": "onet/mbn1/batch_normalization_1/gamma/read",
+                "op": "Identity",
+                "input0": "onet/mbn1/batch_normalization_1/gamma"
+            },
+            "pid": 1,
+            "ph": "X",
+            "tid": 2,
+            "dur": 2
+        },
+        {
+            "name": "onet/mbn1/batch_normalization_1/gamma",
+            "ts": 1513686564953185,
+            "cat": "DataFlow",
+            "pid": 1,
+            "ph": "s",
+            "tid": 0,
+            "id": 25
+        },
+        {
+            "name": "onet/mbn1/batch_normalization_1/gamma",
+            "ts": 1513686564953185,
+            "cat": "DataFlow",
+            "pid": 1,
+            "ph": "t",
+            "tid": 2,
+            "id": 25
+        },
+        {
+            "name": "Add",
+            "ts": 1513686564953399,
+            "cat": "Op",
+            "args": {
+                "name": "onet/conv1/Add",
+                "op": "Add",
+                "input1": "onet/conv1/bias/read",
+                "input0": "onet/conv1/Conv2D"
+            },
+            "pid": 1,
+            "ph": "X",
+            "tid": 0,
+            "dur": 87
+        },
+        {
+            "name": "onet/conv1/Conv2D",
+            "ts": 1513686564953390,
+            "cat": "DataFlow",
+            "pid": 1,
+            "ph": "s",
+            "tid": 4,
+            "id": 26
+        },
+        {
+            "name": "onet/conv1/Conv2D",
+            "ts": 1513686564953399,
+            "cat": "DataFlow",
+            "pid": 1,
+            "ph": "t",
+            "tid": 0,
+            "id": 26
+        },
+        {
+            "name": "onet/conv1/bias/read",
+            "ts": 1513686564953150,
+            "cat": "DataFlow",
+            "pid": 1,
+            "ph": "s",
+            "tid": 3,
+            "id": 27
+        },
+        {
+            "name": "onet/conv1/bias/read",
+            "ts": 1513686564953399,
+            "cat": "DataFlow",
+            "pid": 1,
+            "ph": "t",
+            "tid": 0,
+            "id": 27
+        },
+        {
+            "name": "Relu",
+            "ts": 1513686564953488,
+            "cat": "Op",
+            "args": {
+                "name": "onet/prelu1/prelu1",
+                "op": "Relu",
+                "input0": "onet/conv1/Add"
+            },
+            "pid": 1,
+            "ph": "X",
+            "tid": 0,
+            "dur": 16
+        },
+        {
+            "name": "MaxPool",
+            "ts": 1513686564953505,
+            "cat": "Op",
+            "args": {
+                "name": "onet/pool1/MaxPool",
+                "op": "MaxPool",
+                "input0": "onet/prelu1/prelu1"
+            },
+            "pid": 1,
+            "ph": "X",
+            "tid": 0,
+            "dur": 96
+        },
+        {
+            "name": "DepthwiseConv2dNative",
+            "ts": 1513686564953602,
+            "cat": "Op",
+            "args": {
+                "name": "onet/mbn1/depthwise",
+                "op": "DepthwiseConv2dNative",
+                "input1": "onet/mbn1/dw_kernel/read",
+                "input0": "onet/pool1/MaxPool"
+            },
+            "pid": 1,
+            "ph": "X",
+            "tid": 0,
+            "dur": 31
+        },
+        {
+            "name": "FusedBatchNorm",
+            "ts": 1513686564953634,
+            "cat": "Op",
+            "args": {
+                "name": "onet/mbn1/batch_normalization/FusedBatchNorm",
+                "op": "FusedBatchNorm",
+                "input3": "onet/mbn1/batch_normalization/moving_mean/read",
+                "input4": "onet/mbn1/batch_normalization/moving_variance/read",
+                "input0": "onet/mbn1/depthwise",
+                "input1": "onet/mbn1/batch_normalization/gamma/read",
+                "input2": "onet/mbn1/batch_normalization/beta/read"
+            },
+            "pid": 1,
+            "ph": "X",
+            "tid": 0,
+            "dur": 28
+        },
+        {
+            "name": "onet/mbn1/batch_normalization/gamma/read",
+            "ts": 1513686564953165,
+            "cat": "DataFlow",
+            "pid": 1,
+            "ph": "s",
+            "tid": 1,
+            "id": 28
+        },
+        {
+            "name": "onet/mbn1/batch_normalization/gamma/read",
+            "ts": 1513686564953634,
+            "cat": "DataFlow",
+            "pid": 1,
+            "ph": "t",
+            "tid": 0,
+            "id": 28
+        },
+        {
+            "name": "Relu",
+            "ts": 1513686564953664,
+            "cat": "Op",
+            "args": {
+                "name": "onet/mbn1/relu1/relu1",
+                "op": "Relu",
+                "input0": "onet/mbn1/batch_normalization/FusedBatchNorm"
+            },
+            "pid": 1,
+            "ph": "X",
+            "tid": 0,
+            "dur": 2
+        },
+        {
+            "name": "Conv2D",
+            "ts": 1513686564953667,
+            "cat": "Op",
+            "args": {
+                "name": "onet/mbn1/Conv2D",
+                "op": "Conv2D",
+                "input1": "onet/mbn1/weight/read",
+                "input0": "onet/mbn1/relu1/relu1"
+            },
+            "pid": 1,
+            "ph": "X",
+            "tid": 0,
+            "dur": 16
+        },
+        {
+            "name": "FusedBatchNorm",
+            "ts": 1513686564953684,
+            "cat": "Op",
+            "args": {
+                "name": "onet/mbn1/batch_normalization_2/FusedBatchNorm",
+                "op": "FusedBatchNorm",
+                "input3": "onet/mbn1/batch_normalization_1/moving_mean/read",
+                "input4": "onet/mbn1/batch_normalization_1/moving_variance/read",
+                "input0": "onet/mbn1/Conv2D",
+                "input1": "onet/mbn1/batch_normalization_1/gamma/read",
+                "input2": "onet/mbn1/batch_normalization_1/beta/read"
+            },
+            "pid": 1,
+            "ph": "X",
+            "tid": 0,
+            "dur": 37
+        },
+        {
+            "name": "onet/mbn1/batch_normalization_1/gamma/read",
+            "ts": 1513686564953187,
+            "cat": "DataFlow",
+            "pid": 1,
+            "ph": "s",
+            "tid": 2,
+            "id": 29
+        },
+        {
+            "name": "onet/mbn1/batch_normalization_1/gamma/read",
+            "ts": 1513686564953684,
+            "cat": "DataFlow",
+            "pid": 1,
+            "ph": "t",
+            "tid": 0,
+            "id": 29
+        },
+        {
+            "name": "onet/mbn1/batch_normalization_1/moving_mean/read",
+            "ts": 1513686564953309,
+            "cat": "DataFlow",
+            "pid": 1,
+            "ph": "s",
+            "tid": 1,
+            "id": 30
+        },
+        {
+            "name": "onet/mbn1/batch_normalization_1/moving_mean/read",
+            "ts": 1513686564953684,
+            "cat": "DataFlow",
+            "pid": 1,
+            "ph": "t",
+            "tid": 0,
+            "id": 30
+        },
+        {
+            "name": "Relu",
+            "ts": 1513686564953723,
+            "cat": "Op",
+            "args": {
+                "name": "onet/mbn1/relu2/relu2",
+                "op": "Relu",
+                "input0": "onet/mbn1/batch_normalization_2/FusedBatchNorm"
+            },
+            "pid": 1,
+            "ph": "X",
+            "tid": 0,
+            "dur": 3
+        },
+        {
+            "name": "DepthwiseConv2dNative",
+            "ts": 1513686564953727,
+            "cat": "Op",
+            "args": {
+                "name": "onet/mbn2/depthwise",
+                "op": "DepthwiseConv2dNative",
+                "input1": "onet/mbn2/dw_kernel/read",
+                "input0": "onet/mbn1/relu2/relu2"
+            },
+            "pid": 1,
+            "ph": "X",
+            "tid": 0,
+            "dur": 10
+        },
+        {
+            "name": "onet/mbn2/dw_kernel/read",
+            "ts": 1513686564953298,
+            "cat": "DataFlow",
+            "pid": 1,
+            "ph": "s",
+            "tid": 1,
+            "id": 31
+        },
+        {
+            "name": "onet/mbn2/dw_kernel/read",
+            "ts": 1513686564953727,
+            "cat": "DataFlow",
+            "pid": 1,
+            "ph": "t",
+            "tid": 0,
+            "id": 31
+        },
+        {
+            "name": "FusedBatchNorm",
+            "ts": 1513686564953738,
+            "cat": "Op",
+            "args": {
+                "name": "onet/mbn2/batch_normalization/FusedBatchNorm",
+                "op": "FusedBatchNorm",
+                "input3": "onet/mbn2/batch_normalization/moving_mean/read",
+                "input4": "onet/mbn2/batch_normalization/moving_variance/read",
+                "input0": "onet/mbn2/depthwise",
+                "input1": "onet/mbn2/batch_normalization/gamma/read",
+                "input2": "onet/mbn2/batch_normalization/beta/read"
+            },
+            "pid": 1,
+            "ph": "X",
+            "tid": 0,
+            "dur": 12
+        },
+        {
+            "name": "onet/mbn2/batch_normalization/gamma/read",
+            "ts": 1513686564953292,
+            "cat": "DataFlow",
+            "pid": 1,
+            "ph": "s",
+            "tid": 1,
+            "id": 32
+        },
+        {
+            "name": "onet/mbn2/batch_normalization/gamma/read",
+            "ts": 1513686564953738,
+            "cat": "DataFlow",
+            "pid": 1,
+            "ph": "t",
+            "tid": 0,
+            "id": 32
+        },
+        {
+            "name": "onet/mbn2/batch_normalization/moving_variance/read",
+            "ts": 1513686564953275,
+            "cat": "DataFlow",
+            "pid": 1,
+            "ph": "s",
+            "tid": 1,
+            "id": 33
+        },
+        {
+            "name": "onet/mbn2/batch_normalization/moving_variance/read",
+            "ts": 1513686564953738,
+            "cat": "DataFlow",
+            "pid": 1,
+            "ph": "t",
+            "tid": 0,
+            "id": 33
+        },
+        {
+            "name": "Relu",
+            "ts": 1513686564953752,
+            "cat": "Op",
+            "args": {
+                "name": "onet/mbn2/relu1/relu1",
+                "op": "Relu",
+                "input0": "onet/mbn2/batch_normalization/FusedBatchNorm"
+            },
+            "pid": 1,
+            "ph": "X",
+            "tid": 0,
+            "dur": 2
+        },
+        {
+            "name": "Conv2D",
+            "ts": 1513686564953755,
+            "cat": "Op",
+            "args": {
+                "name": "onet/mbn2/Conv2D",
+                "op": "Conv2D",
+                "input1": "onet/mbn2/weight/read",
+                "input0": "onet/mbn2/relu1/relu1"
+            },
+            "pid": 1,
+            "ph": "X",
+            "tid": 0,
+            "dur": 7
+        },
+        {
+            "name": "FusedBatchNorm",
+            "ts": 1513686564953764,
+            "cat": "Op",
+            "args": {
+                "name": "onet/mbn2/batch_normalization_2/FusedBatchNorm",
+                "op": "FusedBatchNorm",
+                "input3": "onet/mbn2/batch_normalization_1/moving_mean/read",
+                "input4": "onet/mbn2/batch_normalization_1/moving_variance/read",
+                "input0": "onet/mbn2/Conv2D",
+                "input1": "onet/mbn2/batch_normalization_1/gamma/read",
+                "input2": "onet/mbn2/batch_normalization_1/beta/read"
+            },
+            "pid": 1,
+            "ph": "X",
+            "tid": 0,
+            "dur": 11
+        },
+        {
+            "name": "onet/mbn2/batch_normalization_1/beta/read",
+            "ts": 1513686564953258,
+            "cat": "DataFlow",
+            "pid": 1,
+            "ph": "s",
+            "tid": 1,
+            "id": 34
+        },
+        {
+            "name": "onet/mbn2/batch_normalization_1/beta/read",
+            "ts": 1513686564953764,
+            "cat": "DataFlow",
+            "pid": 1,
+            "ph": "t",
+            "tid": 0,
+            "id": 34
+        },
+        {
+            "name": "Relu",
+            "ts": 1513686564953777,
+            "cat": "Op",
+            "args": {
+                "name": "onet/mbn2/relu2/relu2",
+                "op": "Relu",
+                "input0": "onet/mbn2/batch_normalization_2/FusedBatchNorm"
+            },
+            "pid": 1,
+            "ph": "X",
+            "tid": 0,
+            "dur": 2
+        },
+        {
+            "name": "MaxPool",
+            "ts": 1513686564953780,
+            "cat": "Op",
+            "args": {
+                "name": "onet/pool2/MaxPool",
+                "op": "MaxPool",
+                "input0": "onet/mbn2/relu2/relu2"
+            },
+            "pid": 1,
+            "ph": "X",
+            "tid": 0,
+            "dur": 4
+        },
+        {
+            "name": "DepthwiseConv2dNative",
+            "ts": 1513686564953785,
+            "cat": "Op",
+            "args": {
+                "name": "onet/mbn3/depthwise",
+                "op": "DepthwiseConv2dNative",
+                "input1": "onet/mbn3/dw_kernel/read",
+                "input0": "onet/pool2/MaxPool"
+            },
+            "pid": 1,
+            "ph": "X",
+            "tid": 0,
+            "dur": 6
+        },
+        {
+            "name": "FusedBatchNorm",
+            "ts": 1513686564953793,
+            "cat": "Op",
+            "args": {
+                "name": "onet/mbn3/batch_normalization/FusedBatchNorm",
+                "op": "FusedBatchNorm",
+                "input3": "onet/mbn3/batch_normalization/moving_mean/read",
+                "input4": "onet/mbn3/batch_normalization/moving_variance/read",
+                "input0": "onet/mbn3/depthwise",
+                "input1": "onet/mbn3/batch_normalization/gamma/read",
+                "input2": "onet/mbn3/batch_normalization/beta/read"
+            },
+            "pid": 1,
+            "ph": "X",
+            "tid": 0,
+            "dur": 8
+        },
+        {
+            "name": "onet/mbn3/batch_normalization/gamma/read",
+            "ts": 1513686564953236,
+            "cat": "DataFlow",
+            "pid": 1,
+            "ph": "s",
+            "tid": 1,
+            "id": 35
+        },
+        {
+            "name": "onet/mbn3/batch_normalization/gamma/read",
+            "ts": 1513686564953793,
+            "cat": "DataFlow",
+            "pid": 1,
+            "ph": "t",
+            "tid": 0,
+            "id": 35
+        },
+        {
+            "name": "Relu",
+            "ts": 1513686564953802,
+            "cat": "Op",
+            "args": {
+                "name": "onet/mbn3/relu1/relu1",
+                "op": "Relu",
+                "input0": "onet/mbn3/batch_normalization/FusedBatchNorm"
+            },
+            "pid": 1,
+            "ph": "X",
+            "tid": 0,
+            "dur": 2
+        },
+        {
+            "name": "Conv2D",
+            "ts": 1513686564953805,
+            "cat": "Op",
+            "args": {
+                "name": "onet/mbn3/Conv2D",
+                "op": "Conv2D",
+                "input1": "onet/mbn3/weight/read",
+                "input0": "onet/mbn3/relu1/relu1"
+            },
+            "pid": 1,
+            "ph": "X",
+            "tid": 0,
+            "dur": 7
+        },
+        {
+            "name": "onet/mbn3/weight/read",
+            "ts": 1513686564953214,
+            "cat": "DataFlow",
+            "pid": 1,
+            "ph": "s",
+            "tid": 1,
+            "id": 36
+        },
+        {
+            "name": "onet/mbn3/weight/read",
+            "ts": 1513686564953805,
+            "cat": "DataFlow",
+            "pid": 1,
+            "ph": "t",
+            "tid": 0,
+            "id": 36
+        },
+        {
+            "name": "FusedBatchNorm",
+            "ts": 1513686564953813,
+            "cat": "Op",
+            "args": {
+                "name": "onet/mbn3/batch_normalization_2/FusedBatchNorm",
+                "op": "FusedBatchNorm",
+                "input3": "onet/mbn3/batch_normalization_1/moving_mean/read",
+                "input4": "onet/mbn3/batch_normalization_1/moving_variance/read",
+                "input0": "onet/mbn3/Conv2D",
+                "input1": "onet/mbn3/batch_normalization_1/gamma/read",
+                "input2": "onet/mbn3/batch_normalization_1/beta/read"
+            },
+            "pid": 1,
+            "ph": "X",
+            "tid": 0,
+            "dur": 10
+        },
+        {
+            "name": "onet/mbn3/batch_normalization_1/gamma/read",
+            "ts": 1513686564953208,
+            "cat": "DataFlow",
+            "pid": 1,
+            "ph": "s",
+            "tid": 1,
+            "id": 37
+        },
+        {
+            "name": "onet/mbn3/batch_normalization_1/gamma/read",
+            "ts": 1513686564953813,
+            "cat": "DataFlow",
+            "pid": 1,
+            "ph": "t",
+            "tid": 0,
+            "id": 37
+        },
+        {
+            "name": "onet/mbn3/batch_normalization_1/moving_mean/read",
+            "ts": 1513686564953196,
+            "cat": "DataFlow",
+            "pid": 1,
+            "ph": "s",
+            "tid": 1,
+            "id": 38
+        },
+        {
+            "name": "onet/mbn3/batch_normalization_1/moving_mean/read",
+            "ts": 1513686564953813,
+            "cat": "DataFlow",
+            "pid": 1,
+            "ph": "t",
+            "tid": 0,
+            "id": 38
+        },
+        {
+            "name": "Relu",
+            "ts": 1513686564953824,
+            "cat": "Op",
+            "args": {
+                "name": "onet/mbn3/relu2/relu2",
+                "op": "Relu",
+                "input0": "onet/mbn3/batch_normalization_2/FusedBatchNorm"
+            },
+            "pid": 1,
+            "ph": "X",
+            "tid": 0,
+            "dur": 2
+        },
+        {
+            "name": "Reshape",
+            "ts": 1513686564953827,
+            "cat": "Op",
+            "args": {
+                "name": "onet/fc1/Reshape",
+                "op": "Reshape",
+                "input1": "onet/fc1/Reshape/shape",
+                "input0": "onet/mbn3/relu2/relu2"
+            },
+            "pid": 1,
+            "ph": "X",
+            "tid": 0,
+            "dur": 4
+        },
+        {
+            "name": "onet/fc1/Reshape/shape",
+            "ts": 1513686564953122,
+            "cat": "DataFlow",
+            "pid": 1,
+            "ph": "s",
+            "tid": 1,
+            "id": 39
+        },
+        {
+            "name": "onet/fc1/Reshape/shape",
+            "ts": 1513686564953827,
+            "cat": "DataFlow",
+            "pid": 1,
+            "ph": "t",
+            "tid": 0,
+            "id": 39
+        },
+        {
+            "name": "MatMul",
+            "ts": 1513686564953832,
+            "cat": "Op",
+            "args": {
+                "name": "onet/fc1/MatMul",
+                "op": "MatMul",
+                "input1": "onet/fc1/weight/read",
+                "input0": "onet/fc1/Reshape"
+            },
+            "pid": 1,
+            "ph": "X",
+            "tid": 0,
+            "dur": 17
+        },
+        {
+            "name": "onet/fc1/weight/read",
+            "ts": 1513686564953165,
+            "cat": "DataFlow",
+            "pid": 1,
+            "ph": "s",
+            "tid": 2,
+            "id": 40
+        },
+        {
+            "name": "onet/fc1/weight/read",
+            "ts": 1513686564953832,
+            "cat": "DataFlow",
+            "pid": 1,
+            "ph": "t",
+            "tid": 0,
+            "id": 40
+        },
+        {
+            "name": "Add",
+            "ts": 1513686564953850,
+            "cat": "Op",
+            "args": {
+                "name": "onet/fc1/Add",
+                "op": "Add",
+                "input1": "onet/fc1/bias/read",
+                "input0": "onet/fc1/MatMul"
+            },
+            "pid": 1,
+            "ph": "X",
+            "tid": 0,
+            "dur": 4
+        },
+        {
+            "name": "Relu",
+            "ts": 1513686564953855,
+            "cat": "Op",
+            "args": {
+                "name": "onet/prelu5/prelu5",
+                "op": "Relu",
+                "input0": "onet/fc1/Add"
+            },
+            "pid": 1,
+            "ph": "X",
+            "tid": 0,
+            "dur": 2
+        },
+        {
+            "name": "Reshape",
+            "ts": 1513686564953858,
+            "cat": "Op",
+            "args": {
+                "name": "onet/prob/Reshape",
+                "op": "Reshape",
+                "input1": "onet/prob/Reshape/shape",
+                "input0": "onet/prelu5/prelu5"
+            },
+            "pid": 1,
+            "ph": "X",
+            "tid": 0,
+            "dur": 2
+        },
+        {
+            "name": "MatMul",
+            "ts": 1513686564953865,
+            "cat": "Op",
+            "args": {
+                "name": "onet/coor/MatMul",
+                "op": "MatMul",
+                "input1": "onet/coor/weight/read",
+                "input0": "onet/prob/Reshape"
+            },
+            "pid": 1,
+            "ph": "X",
+            "tid": 0,
+            "dur": 3
+        },
+        {
+            "name": "Add",
+            "ts": 1513686564953869,
+            "cat": "Op",
+            "args": {
+                "name": "onet/coor/Add",
+                "op": "Add",
+                "input1": "onet/coor/bias/read",
+                "input0": "onet/coor/MatMul"
+            },
+            "pid": 1,
+            "ph": "X",
+            "tid": 0,
+            "dur": 2
+        },
+        {
+            "name": "onet/coor/bias/read",
+            "ts": 1513686564953139,
+            "cat": "DataFlow",
+            "pid": 1,
+            "ph": "s",
+            "tid": 2,
+            "id": 41
+        },
+        {
+            "name": "onet/coor/bias/read",
+            "ts": 1513686564953869,
+            "cat": "DataFlow",
+            "pid": 1,
+            "ph": "t",
+            "tid": 0,
+            "id": 41
+        },
+        {
+            "name": "_Retval",
+            "ts": 1513686564953872,
+            "cat": "Op",
+            "args": {
+                "name": "_retval_onet/coor/Add_0_0",
+                "op": "_Retval",
+                "input0": "onet/coor/Add"
+            },
+            "pid": 1,
+            "ph": "X",
+            "tid": 0,
+            "dur": 2
+        },
+        {
+            "name": "MatMul",
+            "ts": 1513686564953875,
+            "cat": "Op",
+            "args": {
+                "name": "onet/prob/MatMul",
+                "op": "MatMul",
+                "input1": "onet/prob/weight/read",
+                "input0": "onet/prob/Reshape"
+            },
+            "pid": 1,
+            "ph": "X",
+            "tid": 0,
+            "dur": 3
+        },
+        {
+            "name": "Add",
+            "ts": 1513686564953879,
+            "cat": "Op",
+            "args": {
+                "name": "onet/prob/Add",
+                "op": "Add",
+                "input1": "onet/prob/bias/read",
+                "input0": "onet/prob/MatMul"
+            },
+            "pid": 1,
+            "ph": "X",
+            "tid": 0,
+            "dur": 3
+        },
+        {
+            "name": "onet/prob/bias/read",
+            "ts": 1513686564953131,
+            "cat": "DataFlow",
+            "pid": 1,
+            "ph": "s",
+            "tid": 1,
+            "id": 42
+        },
+        {
+            "name": "onet/prob/bias/read",
+            "ts": 1513686564953879,
+            "cat": "DataFlow",
+            "pid": 1,
+            "ph": "t",
+            "tid": 0,
+            "id": 42
+        },
+        {
+            "name": "Max",
+            "ts": 1513686564953883,
+            "cat": "Op",
+            "args": {
+                "name": "onet/Max",
+                "op": "Max",
+                "input1": "onet/Max/reduction_indices",
+                "input0": "onet/prob/Add"
+            },
+            "pid": 1,
+            "ph": "X",
+            "tid": 0,
+            "dur": 9
+        },
+        {
+            "name": "Sub",
+            "ts": 1513686564953893,
+            "cat": "Op",
+            "args": {
+                "name": "onet/sub",
+                "op": "Sub",
+                "input1": "onet/Max",
+                "input0": "onet/prob/Add"
+            },
+            "pid": 1,
+            "ph": "X",
+            "tid": 0,
+            "dur": 4
+        },
+        {
+            "name": "Exp",
+            "ts": 1513686564953898,
+            "cat": "Op",
+            "args": {
+                "name": "onet/Exp",
+                "op": "Exp",
+                "input0": "onet/sub"
+            },
+            "pid": 1,
+            "ph": "X",
+            "tid": 0,
+            "dur": 3
+        },
+        {
+            "name": "Sum",
+            "ts": 1513686564953902,
+            "cat": "Op",
+            "args": {
+                "name": "onet/Sum",
+                "op": "Sum",
+                "input1": "onet/Max/reduction_indices",
+                "input0": "onet/Exp"
+            },
+            "pid": 1,
+            "ph": "X",
+            "tid": 0,
+            "dur": 5
+        },
+        {
+            "name": "RealDiv",
+            "ts": 1513686564953908,
+            "cat": "Op",
+            "args": {
+                "name": "onet/prob_sm",
+                "op": "RealDiv",
+                "input1": "onet/Sum",
+                "input0": "onet/Exp"
+            },
+            "pid": 1,
+            "ph": "X",
+            "tid": 0,
+            "dur": 3
+        },
+        {
+            "name": "_Retval",
+            "ts": 1513686564953912,
+            "cat": "Op",
+            "args": {
+                "name": "_retval_onet/prob_sm_0_1",
+                "op": "_Retval",
+                "input0": "onet/prob_sm"
+            },
+            "pid": 1,
+            "ph": "X",
+            "tid": 0,
+            "dur": 3
+        }
+    ]
+}
